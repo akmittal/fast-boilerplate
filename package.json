@@ -7,7 +7,7 @@
     "build": "rimraf build-modern && rollup -c rollup.config.js",
     "start:build": "http-server build-modern -o",
     "watch:build": "rimraf build-modern && rollup --watch -c rollup.config.js & http-server build-modern -o",
-    "start": "rollup -c -w & es-dev-server --root-dir ./build-modern --app-index index.html --node-resolve --watch --open ",
+    "start": "npm run watch:build",
     "lint:eslint": "eslint --ext .ts,.js,.html .",
     "format:eslint": "eslint --ext .ts,.js,.html . --fix",
     "lint:prettier": "prettier \"**/*.ts\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
